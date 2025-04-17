@@ -6,10 +6,12 @@ namespace Biblioteca
     class Biblioteca
     {
         private List<Libro> libros;
+        private List<Lector> lectores; // Nuevo atributo para las colecciones de lectores
 
         public Biblioteca()
         {
             this.libros = new List<Libro>();
+            this.lectores = new List<Lector>(); //Se crea la lista de lectores vacia
         }
 
         private Libro buscarLibro(string titulo)
@@ -57,5 +59,36 @@ namespace Biblioteca
                 Console.WriteLine(libro);
             }
         }
+
+        // metodos que faltan implementar
+
+        /*
+        private Lector buscarLector(int dni)
+        {
+
+        }
+        */
+
+        /*
+        public bool altaLector(string nombre, int dni)
+        {
+
+        }
+        */
+
+        /*
+        public void listarLectores()
+        {
+
+        }
+        */
+
+        /*
+        public string prestarLibro(string titulo, int dni)
+        {
+
+        }
+        */
+
     }
 }
