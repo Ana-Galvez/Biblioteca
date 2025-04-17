@@ -40,6 +40,14 @@ namespace Biblioteca
             }
         }
 
+        public void listarPrestamos()
+        {
+            foreach (var libro in prestamos)
+            {
+                Console.WriteLine(libro);
+            }
+        }
+
         public override string ToString()
         {
             return "Nombre: "+nombre+", DNI: "+dni+", Libros en préstamo: "+prestamos.Count;
