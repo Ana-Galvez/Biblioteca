@@ -60,28 +60,39 @@ namespace Biblioteca
             }
         }
 
-        // metodos que faltan implementar
+        /* Métodos relacionados con lectores */
 
-        /*
-        private Lector buscarLector(int dni)
+        private Lector buscarLector(int DNI)
         {
-
+            Lector lectorBuscado = null;
+            int i = 0;
+            while (i < lectores.Count && !lectores[i].getDni().Equals(DNI))
+                i++;
+            if (i != lectores.Count)
+                lectorBuscado = lectores[i];
+            return lectorBuscado;
         }
-        */
-
-        /*
-        public bool altaLector(string nombre, int dni)
+        public bool altaLector(string nombre, int DNI)
         {
-
+            bool resultado = false;
+            Lector lector;
+            lector = buscarLector(DNI);
+            if (lector == null)
+            {
+                lector = new Lector(nombre, DNI);
+                lectores.Add(lector);
+                resultado = true;
+            }
+            return resultado;
         }
-        */
 
-        /*
         public void listarLectores()
         {
-
+            foreach (var lector in lectores)
+            {
+                Console.WriteLine(lector);
+            }
         }
-        */
 
         /*
         public string prestarLibro(string titulo, int dni)
