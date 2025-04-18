@@ -1,6 +1,6 @@
 # Trabajo Práctico - Biblioteca
 
-**Requisitos**
+**Requisitos** <br/>
 Usando el ejemplo de la biblioteca  visto durante la semana en la explicación, nos piden como requerimiento que la misma tenga una colección de lectores registrados. De los lectores conocemos su nombre y dni.
 
 Cada lector puede tener hasta un máximo de 3 préstamos vigentes.
