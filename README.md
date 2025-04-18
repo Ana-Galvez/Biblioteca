@@ -12,8 +12,8 @@ Es decir, se debe retirar el libro de la lista de libros que posee la biblioteca
 Para hacer:
 - Ampliar el UML a los nuevos requerimientos.
 
-
-  Para analizar el UML ampliado ingresa a [Lucid.app](https://lucid.app/lucidchart/68529457-3976-476f-9b9f-024578fb2d10/edit?viewport_loc=-671%2C508%2C2556%2C1209%2C0_0&invitationId=inv_44012138-c97f-4d2f-bb6b-f86bd7208a4c).
+  Para analizar el UML ampliado ingresa a <a href="https://lucid.app/lucidchart/68529457-3976-476f-9b9f-024578fb2d10/edit?viewport_loc=-671%2C508%2C2556%2C1209%2C0_0&invitationId=inv_44012138-c97f-4d2f-bb6b-f86bd7208a4c" target="_blank">Lucid.app</a>
+  
 - Desarrollar el método altaLector que pasándole los parámetros necesarios de el alta a un lector dentro de la lista de lectores si es que no se encontraba previamente registrado.
 
 - Desarrollar el método prestarLibro de la clase Biblioteca la cual recibe por parámetro el título de un libro y el dni del lector que lo solicita y retorna un string con los posibles valores:
