@@ -1,5 +1,13 @@
 # Trabajo Práctico - Biblioteca
 
+## Tabla de contenidos:
+
+1. **[Requisitos](#Requisitos)**
+1. **[Tecnologías usadas](#tecnologías-usadas)**
+1. **[¿Cómo instalar el proyecto?](#cómo-instalar-el-proyecto)**
+1. **[¿Cómo ejecutar las pruebas?](#cómo-ejecutar-las-pruebas)**
+1. **[Ejemplo de la ejecución del test](#Ejemplo-de-la-ejecución-del-test)**
+
 **Requisitos** <br/>
 Usando el ejemplo de la biblioteca  visto durante la semana en la explicación, nos piden como requerimiento que la misma tenga una colección de lectores registrados. De los lectores conocemos su nombre y dni.
 
@@ -24,4 +32,30 @@ Para hacer:
 
 - Generar un video grupal, con cámaras activas, donde cada integrante explique parte del desarrollo y funcionamiento del proyecto.
 
+***
 
+## Tecnologías usadas
+
+<p align="left">
+<!–– C#––>
+<a href="https://learn.microsoft.com/es-es/dotnet/csharp/" target="_blank" data-bs-toggle="tooltip" title="C#"> <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white" alt="C#"/> </a>
+ </p>
+ ***
+
+### ¿Cómo instalar el proyecto?
+
+#### Desde la terminal:
+
+- Clonar el proyecto:
+````
+git clone https://github.com/Ana-Galvez/Biblioteca.git
+````
+
+- Abrir Visual Studio
+- Selecciona el archivo Biblioteca.sln
+- Presiona F5 para ejecutar el proyecto.
+***
+
+## Ejemplo de la ejecución del test:
+
+![Test](./assets/test.png)

@@ -36,6 +36,8 @@ namespace Biblioteca
             Console.WriteLine("");
             Console.WriteLine("LISTA DE LIBROS:");
             biblioteca.listarLibros();
+            Console.WriteLine("\nPresione ENTER para salir...");
+            Console.ReadLine();
 
 
             void cargarLibros(int cantidad)
