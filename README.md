@@ -8,7 +8,7 @@
 1. **[¿Cómo ejecutar las pruebas?](#cómo-ejecutar-las-pruebas)**
 1. **[Ejemplo de la ejecución del test](#Ejemplo-de-la-ejecución-del-test)**
 
-**Requisitos** <br/>
+## **Requisitos** <br/>
 Usando el ejemplo de la biblioteca  visto durante la semana en la explicación, nos piden como requerimiento que la misma tenga una colección de lectores registrados. De los lectores conocemos su nombre y dni.
 
 Cada lector puede tener hasta un máximo de 3 préstamos vigentes.
@@ -40,9 +40,10 @@ Para hacer:
 <!–– C#––>
 <a href="https://learn.microsoft.com/es-es/dotnet/csharp/" target="_blank" data-bs-toggle="tooltip" title="C#"> <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white" alt="C#"/> </a>
  </p>
+
  ***
 
-### ¿Cómo instalar el proyecto?
+## ¿Cómo instalar el proyecto?
 
 #### Desde la terminal:
 
