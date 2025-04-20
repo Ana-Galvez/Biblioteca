@@ -22,16 +22,13 @@ namespace Biblioteca
             Console.WriteLine("LISTA DE LECTORES");
             biblioteca.listarLectores();
             Console.WriteLine("");
-            SolicitarYPrestarLibro();
-            if (HayMasDeUnLector())
+            bool continuar = true;
+            while (continuar)
             {
+                SolicitarYPrestarLibro();
                 Console.WriteLine("¿Desea realizar otro préstamo? (s/n)");
                 string respuesta = Console.ReadLine().ToLower();
-
-                if (respuesta == "s")
-                {
-                    SolicitarYPrestarLibro();
-                }
+                continuar = (respuesta == "s");
             }
             Console.WriteLine("");
             Console.WriteLine("LISTA DE LIBROS:");

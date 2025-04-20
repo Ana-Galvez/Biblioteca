@@ -60,3 +60,4 @@ git clone https://github.com/Ana-Galvez/Biblioteca.git
 ## Ejemplo de la ejecución del test:
 
 ![Test](./assets/test.png)
+![Test](./assets/test1.png)
