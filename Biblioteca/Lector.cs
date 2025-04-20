@@ -48,12 +48,15 @@ namespace Biblioteca
             }
         }
 
+        public int getPrestamos()
+        {
+            return prestamos.Count;
+        }
+
         public override string ToString()
         {
             return "Nombre: "+nombre+", DNI: "+dni+", Libros en préstamo: "+prestamos.Count;
         }
     }
-
-   
 
     }

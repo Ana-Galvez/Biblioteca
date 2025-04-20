@@ -5,6 +5,7 @@
         private string titulo;
         private string autor;
         private string editorial;
+        private bool disponible = true;
 
         public Libro(string titulo, string autor, string editorial)
         {
@@ -18,9 +19,25 @@
             return titulo;
         }
 
+        public bool estaDisponible()
+        {
+            return disponible;
+        }
+
+        public void marcarComoPrestado()
+        {
+            disponible = false;
+        }
+
+        public void marcarComoDisponible()
+        {
+            disponible = true;
+        }
+
         public override string ToString()
         {
-            return "Título: " + titulo + " Autor: " + autor + " Editorial: " + editorial;
+            string estado = disponible ? "Disponible" : "Prestado";
+            return "Título: " + titulo + " Autor: " + autor + " Editorial: " + editorial + " | Estado: " + estado;
         }
     }
 }

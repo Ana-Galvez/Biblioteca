@@ -21,6 +21,22 @@ namespace Biblioteca
             Console.WriteLine("");
             Console.WriteLine("LISTA DE LECTORES");
             biblioteca.listarLectores();
+            Console.WriteLine("");
+            SolicitarYPrestarLibro();
+            if (HayMasDeUnLector())
+            {
+                Console.WriteLine("¿Desea realizar otro préstamo? (s/n)");
+                string respuesta = Console.ReadLine().ToLower();
+
+                if (respuesta == "s")
+                {
+                    SolicitarYPrestarLibro();
+                }
+            }
+            Console.WriteLine("");
+            Console.WriteLine("LISTA DE LIBROS:");
+            biblioteca.listarLibros();
+
 
             void cargarLibros(int cantidad)
             {
@@ -45,6 +61,11 @@ namespace Biblioteca
                     if (pudeCargar) Console.WriteLine("Lector " + nombre + " con DNI " + DNI + " agendado correctamente.");
                     else Console.WriteLine("Lector " + nombre + " con DNI " + DNI + " ya existe.");
                 }
+            }
+
+            bool HayMasDeUnLector()
+            {
+                return biblioteca.CantidadLectores() > 1;
             }
 
             // Validaciones para ingresar números enteros para cantidad de libros y de lectores
@@ -96,6 +117,18 @@ namespace Biblioteca
                     else Console.WriteLine("Error: Debe ingresar un número de DNI válido");
                 }
             }
+
+            void SolicitarYPrestarLibro()
+            {
+                Console.WriteLine("Ingrese el título del libro a prestar:");
+                string titulo = Console.ReadLine();
+
+                int dni = SolicitarDNI();
+
+                string resultado = biblioteca.prestarLibro(titulo, dni);
+                Console.WriteLine($"Resultado del préstamo: {resultado}");
+            }
+
         }
     }
 }

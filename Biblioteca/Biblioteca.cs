@@ -86,6 +86,11 @@ namespace Biblioteca
             return resultado;
         }
 
+        public int CantidadLectores()
+        {
+            return lectores.Count;
+        }
+
         public void listarLectores()
         {
             foreach (var lector in lectores)
@@ -102,7 +107,12 @@ namespace Biblioteca
             {
                 return "LIBRO INEXISTENTE";
             }
-        
+
+            if (!libro.estaDisponible())
+            {
+                return "LIBRO NO DISPONIBLE";
+            }
+
             Lector lector = buscarLector(DNI);
             if (lector == null)
             {
@@ -115,8 +125,8 @@ namespace Biblioteca
             }
         
             lector.agregarPrestamo(libro);
-            eliminarLibro(titulo);
-            return "PRESTAMO EXITOSO";
+            libro.marcarComoPrestado(); // No se elimina el libro lo marca no disponible ya que si se elimina se tendria que volver a cargar
+            return "PRÉSTAMO EXITOSO";
         }
     }
 }
