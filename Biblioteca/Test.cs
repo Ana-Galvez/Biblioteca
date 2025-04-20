@@ -64,11 +64,6 @@ namespace Biblioteca
                 }
             }
 
-            bool HayMasDeUnLector()
-            {
-                return biblioteca.CantidadLectores() > 1;
-            }
-
             // Validaciones para ingresar números enteros para cantidad de libros y de lectores
             void SolicitarYCargarLibros()
             {
