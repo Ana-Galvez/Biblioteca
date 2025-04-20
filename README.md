@@ -27,7 +27,7 @@ Para hacer:
 - Desarrollar el método prestarLibro de la clase Biblioteca la cual recibe por parámetro el título de un libro y el dni del lector que lo solicita y retorna un string con los posibles valores:
 "PRESTAMO EXITOSO" (en este caso el libro se le pudo prestar al lector, se lo quitó de la lista de libros que dispone la biblioteca y se lo adjudicó al lector).
 "LIBRO INEXISTENTE" (cuando el libro no se encuentra dentro de la colección de libros en la biblioteca)
-"TOPE DE PRESTAMO ALCAZADO" (cuando el lector ya posee tres libros en préstamo).
+"TOPE DE PRESTAMO ALCANZADO" (cuando el lector ya posee tres libros en préstamo).
 "LECTOR INEXISTENTE" (cuando el lector no es se encuentra registrado dentro de la colección de lectores en la biblioteca).
 
 - Generar un video grupal, con cámaras activas, donde cada integrante explique parte del desarrollo y funcionamiento del proyecto.
