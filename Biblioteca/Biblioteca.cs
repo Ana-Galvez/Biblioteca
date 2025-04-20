@@ -97,26 +97,26 @@ namespace Biblioteca
         
         public string prestarLibro(string titulo, int DNI)
         {
-            lector.agregarPrestamo(libro);
-            libros.Remove(libro);
-            return "PRESTAMO EXITOSO";
-            
             Libro libro = buscarLibro(titulo);
             if (libro == null)
             {
                 return "LIBRO INEXISTENTE";
             }
-
-            if (lector.getPrestamos().count >= 3)
-            {
-                return "TOPE DE PRÉSTAMO ALCANZADO";
-            }
-
-            Lecttor lector = buscarLector(DNI);
+        
+            Lector lector = buscarLector(DNI);
             if (lector == null)
             {
                 return "LECTOR INEXISTENTE";
             }
+        
+            if (lector.getPrestamos() >= 3)
+            {
+                return "TOPE DE PRÉSTAMO ALCANZADO";
+            }
+        
+            lector.agregarPrestamo(libro);
+            eliminarLibro(titulo);
+            return "PRESTAMO EXITOSO";
         }
     }
 }
