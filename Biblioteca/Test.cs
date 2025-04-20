@@ -16,24 +16,34 @@ namespace Biblioteca
             //Console.WriteLine("---------------------");
             //biblioteca.listarLibros();
             Console.WriteLine("");
-            Console.WriteLine("LISTA DE LIBROS");
+            Console.WriteLine("\n========================================");
+            Console.WriteLine("          LISTA DE LIBROS ");
+            Console.WriteLine("========================================");
             biblioteca.listarLibros();
-            Console.WriteLine("");
-            Console.WriteLine("LISTA DE LECTORES");
+            Console.WriteLine("\n========================================");
+            Console.WriteLine("          LISTA DE LECTORES ");
+            Console.WriteLine("========================================");
             biblioteca.listarLectores();
             Console.WriteLine("");
             bool continuar = true;
             while (continuar)
             {
+                Console.WriteLine("\n----------------------------------------");
+                Console.WriteLine("         NUEVO PRÉSTAMO DE LIBRO");
+                Console.WriteLine("----------------------------------------");
                 SolicitarYPrestarLibro();
                 Console.WriteLine("¿Desea realizar otro préstamo? (s/n)");
                 string respuesta = Console.ReadLine().ToLower();
                 continuar = (respuesta == "s");
             }
             Console.WriteLine("");
-            Console.WriteLine("LISTA DE LIBROS:");
+            Console.WriteLine("\n========================================");
+            Console.WriteLine("          LISTA DE LIBROS ");
+            Console.WriteLine("========================================");
             biblioteca.listarLibros();
-            Console.WriteLine("LISTA DE LECTORES");
+            Console.WriteLine("\n========================================");
+            Console.WriteLine("          LISTA DE LECTORES ");
+            Console.WriteLine("========================================");
             biblioteca.listarLectores();
             Console.WriteLine("\nPresione ENTER para salir...");
             Console.ReadLine();
