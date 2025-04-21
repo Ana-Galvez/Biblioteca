@@ -60,17 +60,27 @@ namespace Biblioteca
 
                 }
             }
+
             void cargarLectores(int cantidad) // si se escribe 2 o más DNI iguales el segundo y/o más no se agrega
             {
                 bool pudeCargar;
-                for (int i = 1; i <= cantidad; i++)
+                int i = 1;
+                while (i <= cantidad)
+                // for (int i = 1; i <= cantidad; i++)
                 {
-                    Console.WriteLine("Agregue el nombre del lector");
+                    Console.WriteLine("Agregue el nombre del lector ("+ i+")");
                     string nombre = Console.ReadLine();
                     int DNI = SolicitarDNI();//Método para validar que sea número entero positivo
                     pudeCargar = biblioteca.altaLector(nombre, DNI);
-                    if (pudeCargar) Console.WriteLine("Lector " + nombre + " con DNI " + DNI + " agendado correctamente.");
-                    else Console.WriteLine("Lector " + nombre + " con DNI " + DNI + " ya existe.");
+                    if (pudeCargar){
+                        Console.WriteLine("Lector " + nombre + " con DNI " + DNI + " agendado correctamente.");
+                        Console.WriteLine("------------------------------------------");
+                        i++; //aumenta el contador si fue correctamente cargado el lector
+                    }
+                    else {
+                        Console.WriteLine(" Error: ya existe un lector " + nombre + " con DNI ingresado ( " + DNI + "), por favor verifique los datos.");
+                        Console.WriteLine("------------------------------------------");
+                    }
                 }
             }
 
@@ -120,7 +130,10 @@ namespace Biblioteca
                     {
                         return dni;
                     }
-                    else Console.WriteLine("Error: Debe ingresar un número de DNI válido");
+                    else {
+                        Console.WriteLine("Error: Debe ingresar un número de DNI válido");
+                        Console.WriteLine("------------------------------------------");
+                    }
                 }
             }
 
